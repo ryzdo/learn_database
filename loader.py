@@ -1,4 +1,6 @@
 import csv
+import time
+
 from db import db_session
 from models import Salary
 
@@ -24,4 +26,7 @@ def save_salary_data(row):
 
 
 if __name__ == '__main__':
+    start = time.time()
     read_csv('salary.csv')
+    print('Данные загружены за ', time.time() - start)
+    # Данные загружены за  13.730588674545288
